@@ -19,7 +19,7 @@ module.exports = (function() {
     // auto carregamento
     load()
         .include('src/routes')
-        .then('src/config/connection.js') // extensão .js para não confundir com diretorio
+        .then('config/connection.js') // extensão .js para não confundir com diretorio
         .then('src/controllers')
         .into(app);
 
