@@ -3,6 +3,7 @@ var load = require('express-load');
 var bodyParser = require('body-parser');
 
 module.exports = function() {
+
     var app = express();
 
     app.set('views engine', 'ejs');
@@ -14,7 +15,7 @@ module.exports = function() {
 
     // auto carregamento
     load('routes', { cwd: 'src'} )
-        .then(app);
+        .into(app);
 
     return app;
 }
