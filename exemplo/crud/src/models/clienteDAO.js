@@ -1,4 +1,4 @@
-var ClienteDAO = function(connection) {
+function ClienteDAO(connection) {
     // returna o objeto 'db'
     this._connection = connection();
 }

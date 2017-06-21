@@ -2,7 +2,7 @@ var mongo = require('mongodb');
 
 var connectionMongoDB = function() {
     console.log('conexao de conexão...');
-    var db = new mongo.db(
+    var db = new mongo.Db(
         'crud_basico',
         new mongo.Server(
             'localhost',

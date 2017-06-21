@@ -24,6 +24,7 @@ module.exports = (function() {
         .include('src/routes')
         .then('config/connection.js') // extensão .js para não confundir com diretorio
         .then('src/controllers')
+        .then('src/models')
         .into(app);
 
     return app;
