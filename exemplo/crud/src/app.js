@@ -1,6 +1,7 @@
 var express = require('express');
 var load = require('consign');
-var bodyParser = require('body-parser');
+var bodyParser = require('body-parser');                         
+var validator = require('express-validator'); 
 
 module.exports = (function() {
 
@@ -13,8 +14,10 @@ module.exports = (function() {
     // realizar a leitura dos arquivos estáticos
     //app.use(express.static('./src/public'));
 
-    app.use(bodyParser.urlencoded({ extended: true} ));
-    //app.use(bodyParser.json());
+    app.use(bodyParser.json()); // for parsing application/json
+    app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
+
+    app.use(validator());
 
     // auto carregamento
     load()

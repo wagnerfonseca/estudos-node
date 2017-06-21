@@ -11,7 +11,6 @@ var connectionMongoDB = function() {
         ),
         {}
     );
-
     return db;
 }
 
