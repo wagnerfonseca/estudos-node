@@ -1,5 +1,11 @@
 exports.index = function(app, req, res) {
-    res.render('cliente/index');
+    // Realizando uma conexao com a base de dados
+    var conexao = app.config.connection; 
+    var dao = new app.src.models.clienteDAO(conexao);
+
+    dao.findAll(function(err, results){
+        res.render('cliente/index', { clientes: results } );
+    }); 
 }
 
 exports.novo = function(app, req, res) {
@@ -26,5 +32,5 @@ exports.salvar = function(app, req, res) {
 
     dao.salvar(cliente);
     
-    res.send('Ok');
+    res.redirect('/clientes');
 }

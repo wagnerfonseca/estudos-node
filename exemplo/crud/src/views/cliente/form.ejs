@@ -21,6 +21,13 @@
                 <label for="nome">Sobre Nome:</label>
                 <input type="text" class="form-control" id="sobreNome" name="sobreNome" value="<%=cliente.sobreNome%>">
             </div>
+            <div class="form-group">
+                <label for="sexo">Sexo:</label>
+                <div class="form-group" id="sexo">
+                    <label class="radio-inline"><input type="radio" name="sexo" value="M">Masculino</label>
+                    <label class="radio-inline"><input type="radio" name="sexo" value="F">Feminino</label>
+                </div>
+            </div>
 
             <button type="submit" class="btn btn-default">Cadastrar</button>
         </form>
