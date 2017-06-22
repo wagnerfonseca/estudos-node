@@ -3,10 +3,10 @@ function ClienteDAO(connection) {
     this._db = connection();
 }
 
-ClienteDAO.prototype.salvar = function(src) {
+ClienteDAO.prototype.salvar = function(src, callback) {
     this._db.open( function(err, mongoClient) {
         mongoClient.collection( 'cliente', function(err, collection) {
-            collection.insert(src);
+            collection.insert(src, callback);
             mongoClient.close();
         });
     } );
@@ -16,6 +16,7 @@ ClienteDAO.prototype.findAll = function(callback) {
     this._db.open( function(err, db) {
         db.collection( 'cliente', function(err, collection) {
             collection.find().toArray(callback);
+            db.close();
         })
     });
 }

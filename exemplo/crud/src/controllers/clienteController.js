@@ -25,12 +25,14 @@ exports.salvar = function(app, req, res) {
         res.render('cliente/form', {errors: errors, cliente: cliente} );
         return;
     }
-
-    // Realizando uma conexao com a base de dados
-    var conexao = app.config.connection; 
-    var dao = new app.src.models.clienteDAO(conexao);
-
-    dao.salvar(cliente);
+    console.log(cliente);
     
-    res.redirect('/clientes');
+    // Realizando uma conexao com a base de dados
+    // var conexao = app.config.connection; 
+    // var dao = new app.src.models.clienteDAO(conexao);
+
+    // dao.salvar(cliente, function(err, result) {        
+    //     res.redirect('/clientes');        
+    // });    
+    
 }
