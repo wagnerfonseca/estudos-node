@@ -8,4 +8,4 @@ const bookSchema = Joi.object({
     datePublished: Joi.date().iso()
 })
 
-module.exports = bookSchema
+module.exports = { bookSchema }

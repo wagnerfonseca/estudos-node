@@ -1,7 +1,5 @@
 const Hapi = require('hapi')
 const _ = require('lodash')
-const fse = require('fs-extra')
-
 
 // Create a server with a host and port
 const server = new Hapi.Server()
@@ -14,12 +12,9 @@ server.connection({
 server.route(require('./helper/routes'))
 
 server.start((err) => {
-
     if (err)
         throw err
-
     console.log(`server running at ${server.info.uri}`)
-
 })
 
 module.exports = server
