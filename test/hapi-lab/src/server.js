@@ -1,4 +1,6 @@
 const Hapi = require('hapi')
+const _ = require('lodash')
+const fse = require('fs-extra')
 
 
 // Create a server with a host and port
@@ -8,7 +10,8 @@ server.connection({
     port: 3000
 })
 
-server.route(require('./routes/index'))
+// all routes
+server.route(require('./helper/routes'))
 
 server.start((err) => {
 

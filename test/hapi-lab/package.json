@@ -2,16 +2,19 @@
   "name": "hapi-lab",
   "version": "1.0.0",
   "description": "Exemplo do uso de Hapi.js",
-  "main": "index.js",
+  "main": "app.js",
   "dependencies": {
+    "fs-extra": "^3.0.1",
     "hapi": "^16.4.3",
-    "joi": "^10.6.0"
+    "joi": "^10.6.0",
+    "lodash": "^4.17.4",
+    "wrench": "^1.5.9"
   },
   "devDependencies": {
     "lab": "^14.1.0"
   },
   "scripts": {
-    "start": "node app"
+    "start": "nodemon app"
   },
   "author": "Wagner Fonseca",
   "license": "ISC"

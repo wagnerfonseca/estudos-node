@@ -1,9 +1,7 @@
-const routes = [{
+module.exports = {
     method: 'GET',
     path: '/',
     handler: (request, reply) => {
-        reply('Olá')
+        reply('')
     }
-}]
-
-module.exports = routes
+}
