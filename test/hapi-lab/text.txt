@@ -1,0 +1,6 @@
+export REDSHIFT_HOST='red-us-east-0-bi-analytics-dev-cl-001.c76gmdpugrs7.us-east-1.redshift.amazonaws.com'
+export REDSHIFT_PORT=5439
+export REDSHIFT_DB='ml_bi_prod'
+export REDSHIFT_USER='insights'
+export REDSHIFT_PASS='@!1nSigH1s#@'
+export BD='REDISHIFT'
